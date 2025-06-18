@@ -12,7 +12,7 @@ public class SplitArrayLargestSum {
             start = Math.max(start, nums[i]);
             end += nums[i];
         }
-        while (start <= end) {
+        while (start < end) {
             int mid = start + (end - start) / 2;
             int sum = 0;
             int pieces = 1;
@@ -30,6 +30,6 @@ public class SplitArrayLargestSum {
                 start = mid + 1;
             }
         }
-        return 0;
+        return end;
     }
 }

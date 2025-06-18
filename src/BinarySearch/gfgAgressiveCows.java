@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class gfgAgressiveCows {
     public static void main(String[] args) {
-        int[] stalls = {2, 12, 11, 3, 26, 7};
+        int[] stalls = {6, 4, 3, 16, 20, 7, 18, 10};
         int k = 5;
         System.out.println(aggressiveCows(stalls, k));
     }
