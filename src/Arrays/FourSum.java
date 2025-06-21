@@ -15,9 +15,9 @@ public class FourSum {
     }
 
     private static List<List<Integer>> fourSum(int[] nums, int target){
-        List<List<Integer>> li=new ArrayList<>();
+        List<List<Integer>> result=new ArrayList<>();
         if(nums==null || nums.length<4){
-            return li;
+            return result;
         }
         Arrays.sort(nums);
         for(int i=0;i<nums.length-3;i++){
@@ -32,7 +32,7 @@ public class FourSum {
                 while(left<right){
                     long sum=(long)nums[i]+nums[j]+nums[left]+nums[right];
                     if(sum==target){
-                        li.add(Arrays.asList(nums[i],nums[j],nums[left],nums[right]));
+                        result.add(Arrays.asList(nums[i],nums[j],nums[left],nums[right]));
                         while(left<right&&nums[left]==nums[left+1]){
                             left++;
                         }
@@ -49,6 +49,6 @@ public class FourSum {
                 }
             }
         }
-        return li;
+        return result;
     }
 }
