@@ -1,4 +1,4 @@
-package Arrays;
+package StringBuilder;
 
 public class AtoiFunc {
     public static void main(String[] args) {
