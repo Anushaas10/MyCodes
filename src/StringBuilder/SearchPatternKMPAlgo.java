@@ -6,8 +6,8 @@ import java.util.List;
 
 public class SearchPatternKMPAlgo {
     public static void main(String[] args) {
-        String pat = "ab";
-        String txt = "ababcababc";
+        String pat = "aaba";
+        String txt = "aabaacaadaabaaba";
         System.out.println(search(pat, txt));
     }
 
