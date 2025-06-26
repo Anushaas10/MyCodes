@@ -8,12 +8,19 @@ public class DistributeCandiesII {
     }
 
     static long distributeCandies(int n, int limit) {
-        long res = 0;
-        for (int i = 0; i <= Math.min(limit, n); i++) {
-            if (n - i <= 2 * limit)
-                res += Math.min(n - i, limit) - Math.max(0, n - i - limit) + 1;
-        }
-        return res;
-        
+//        long res = 0;
+//        for (int i = 0; i <= Math.min(limit, n); i++) {
+//            if (n - i <= 2 * limit)
+//                res += Math.min(n - i, limit) - Math.max(0, n - i - limit) + 1;
+//        }
+//        return res;
+        return combCount(n)
+                - 3 * combCount(n - (limit + 1))
+                + 3 * combCount(n - 2 * (limit + 1))
+                - combCount(n - 3 * (limit + 1));
+    }
+    static long combCount(long sum) {
+        if (sum < 0) return 0;
+        return (sum + 2) * (sum + 1) / 2;
     }
 }
