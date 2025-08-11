@@ -12,7 +12,6 @@ public class KadanesAlgorithm {
             sum = Math.max(sum + arr[i], arr[i]);
             max_sum= Math.max(max_sum, sum);
         }
-
         return max_sum;
     }
 }
